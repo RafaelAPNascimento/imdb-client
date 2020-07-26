@@ -22,4 +22,6 @@
         http://localhost:8181/search/movie?title=batman 
         
 
-Para mais detalhes sobre as requisições veja a classe **MovieSearchTest.java**        
+Para mais detalhes sobre as requisições veja a classe **MovieSearchTest.java**
+
+Rafael        
