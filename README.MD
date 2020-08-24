@@ -24,4 +24,7 @@
 
 Para mais detalhes sobre as requisições veja a classe **MovieSearchTest.java**
 
+ansible
+    
+    ansible-playbook create-imdb-image.yml
 Rafael        

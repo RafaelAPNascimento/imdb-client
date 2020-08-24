@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: stop if we have old docker container
+      command: docker stop imdb-cli
+      ignore_errors: yes
+
+    - name: remove stoped container
+      command: docker rm imdb-cli
+      ignore_errors: true
+
+    - name: remove current docker image
+      command: docker rmi rafaelnasc1mento/imdb-cli
+      ignore_errors: true
+
+    - name: building docker image
+      command: docker build -t rafaelnasc1mento/imdb-cli:latest .
+      args:
+        chdir: /opt/devops/imdb-app
+
+    - name: run container
+      command:  docker run -d -p 8080:8181 --name imdb-cli rafaelnasc1mento/imdb-cli
