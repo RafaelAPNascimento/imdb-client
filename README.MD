@@ -20,7 +20,7 @@
  Exemplo de request (GET):
         
         http://localhost:8181/search/movie?title=batman 
-        
+        52.91.62.184:8181/search/movie?title=batman        
 
 Para mais detalhes sobre as requisições veja a classe **MovieSearchTest.java**
 

@@ -62,6 +62,7 @@ public class SearchMovieByNameHandler implements HttpHandler
                                 .reduce("", (movie1, next) -> movie1.concat(next.concat("\n")), String::concat);
         }
 
+        response.concat("\n>>>>>>>>>>>>>>>> end results");
         byte[] resp = response.getBytes();
         exchange.sendResponseHeaders(status, resp.length);
         OutputStream outputStream = exchange.getResponseBody();

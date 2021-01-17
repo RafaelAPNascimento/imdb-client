@@ -59,6 +59,13 @@
             <version>2.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-ec2 -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-ec2</artifactId>
+            <version>1.11.851</version>
+        </dependency>
+
     </dependencies>
 
 
