@@ -59,10 +59,10 @@ public class SearchMovieByNameHandler implements HttpHandler
             else
                 response = movieTitleSearch.getMovies().stream()
                                 .map(movie -> movie.getTitle())
-                                .reduce("", (movie1, next) -> movie1.concat(next.concat("\n >>> ")), String::concat);
+                                .reduce("", (movie1, next) -> movie1.concat(next.concat("\n")), String::concat);
         }
 
-        response.concat("\n>>>>>>>>>>>>>>>> end results");
+        response.concat("\n end results");
         byte[] resp = response.getBytes();
         exchange.sendResponseHeaders(status, resp.length);
         OutputStream outputStream = exchange.getResponseBody();
