@@ -59,7 +59,7 @@ public class SearchMovieByNameHandler implements HttpHandler
             else
                 response = movieTitleSearch.getMovies().stream()
                                 .map(movie -> movie.getTitle())
-                                .reduce("DEVOPS UPDATE\n", (movie1, next) -> movie1.concat(next.concat("\n")), String::concat);
+                                .reduce(">>>>>>>> THIS IS THE PROJECT\n==============\n", (movie1, next) -> movie1.concat(next.concat("\n")), String::concat);
         }
 
         response.concat("\n end results");
